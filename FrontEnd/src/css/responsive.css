@@ -1,0 +1,64 @@
+@media (max-width: 575.98px) {
+.login_wrapper {
+    min-width: 80%;
+}
+.login_area {
+    background-image: unset;
+}
+b.section_title {
+    font-size: 22px;
+}
+.input_area .form-control, span.register_area {
+    font-size: 14px;
+}
+
+
+/* ====profile page start==== */
+b.api_title {
+    font-size: 20px;
+}
+}
+
+
+@media (min-width: 576px) and (max-width: 767.98px) { 
+
+.login_area {
+    overflow-y: scroll;
+}
+.login_wrapper {
+    min-width: 500px;
+    margin: 150px 0px 30px;
+}
+
+/* ====profile page start==== */
+b.api_title {
+    font-size: 17px;
+}
+.btn_grps {
+    flex-flow: wrap;
+    gap: 5px;
+}
+span.api_secret, span.client_id {
+    font-size: 14px;
+}
+}
+
+
+@media (min-width: 768px) and (max-width: 991.98px) { 
+
+}
+
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+}
+
+
+@media (min-width: 1200px) {
+    .login_area {
+        background-size: cover;
+    }
+    .login_wrapper {
+        min-width: 27%!important;
+    }
+}

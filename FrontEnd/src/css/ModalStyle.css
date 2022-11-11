@@ -1,0 +1,34 @@
+.submit_password {
+    background: blue;
+    color: #fff;
+    text-transform: capitalize;
+    padding: 6px 29px;
+    color: #fff !important;
+    display: table;
+    margin: 15px auto 0;
+}
+
+.password_area {
+    position: relative;
+}
+
+.password_area .form-control,
+.submit_password {
+    box-shadow: none !important;
+}
+
+.eye_icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+}
+
+.fa-eye-slash,
+.activeEye .fa-eye {
+    display: none;
+}
+
+.activeEye .fa-eye-slash {
+    display: block;
+}

@@ -1,0 +1,90 @@
+.user_dp {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user_name {
+    text-transform: capitalize;
+    text-align: center;
+    display: block;
+    margin: 10px 0 30px;
+}
+
+.user_details_tab {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.user_details_tab .nav-tabs {
+    border-bottom: none;
+}
+
+.tab_inner {
+    background: #f2f4f6;
+    padding: 15px;
+    border-radius: .5rem;
+}
+
+.user_details_tab .nav-tabs .nav-link {
+    border: 0;
+    padding: 1rem 1rem;
+    background-color: #f2f4f6;
+}
+
+.user_details_tab .nav-tabs .nav-link.active {
+    background: #fff;
+    color: #000;
+}
+
+.user_details_tab .tab-pane {
+    background: #fff;
+    border-radius: .5rem;
+    border-top-left-radius: 0rem;
+    border-top-right-radius: 0rem;
+
+}
+
+.user_tab_details {
+    padding: 15px;
+}
+
+.change_para {
+    text-align: center;
+}
+
+.user_tab_details .needs-validation .form-control {
+    padding-left: 50px;
+}
+
+.subnit_btn {
+    width: 100%;
+    background-color: var(--theme_black);
+    color: var(--pure_white) !important;
+    border-radius: 8px;
+    letter-spacing: 0.5px;
+    height: 42px;
+    border: none;
+    box-shadow: none !important;
+    max-width: 300px;
+    margin: 30px auto 0;
+    display: table;
+}
+.login_input {
+    position: relative;
+}
+.login_input::after {
+    content: "";
+        width: 1px;
+        height: 100%;
+        position: absolute;
+        background: #ced4da;
+        top: 0;
+        left: 40px;
+}

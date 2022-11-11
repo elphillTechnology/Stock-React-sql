@@ -1,0 +1,264 @@
+/* =======log in page start====== */
+
+:root {
+    --theme_black: rgb(38, 43, 64);
+    --pure_white: #fff;
+}
+.login_area {
+    width: 100%;
+    height: 100vh;
+    /* background-image: url(../img/reference/Login33.png); */
+    background-image: url(../../public/img/reference/Login33.png);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login_wrapper {
+    min-width: 500px;
+}
+span.page_title {
+    display: block;
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: 200;
+}
+.login_inner {
+    box-shadow: rgb(0 0 0 / 10%) 0px 1px 3px 0px, rgb(0 0 0 / 6%) 0px 1px 2px 0px !important;
+    padding: 30px;
+    border-radius: 4px;
+    background-color: var(--pure_white);
+}
+b.section_title {
+    text-align: center;
+    display: block;
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: var(--theme_black);
+}
+.input_area {
+    position: relative;
+}
+.input_icon {
+    position: absolute;
+    left: 13px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--theme_black);
+}
+.input_area .form-control {
+    border-radius: 8px;
+    min-height: 42px;
+    padding-left: 50px;
+    position: relative;
+    font-weight: 300;
+    box-shadow: rgb(0 0 0 / 10%) 0px 1px 3px 0px, rgb(0 0 0 / 4%) 0px 1px 2px 0px !important;
+}
+.input_area::after {
+    content: "";
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    background: #ced4da;
+    top: 0;
+    left: 40px;
+}
+.login_inner .form-label {
+    margin-bottom: 3px;
+    text-transform: capitalize;
+}
+.checkbox_area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.form-check-input {
+    background-color: #eee;
+    border: 1px solid #eee;
+    box-shadow: none!important;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+}
+input.form-check-input[type="checkbox"]:enabled:checked {
+    background-color: var(--theme_black) !important;
+    border: 1px solid var(--theme_black);
+    color: white;
+    box-shadow: none!important;
+}
+.form-check-label {
+    padding-left: 5px;
+    cursor: pointer;
+    font-weight: 300;
+    font-size: 16px;
+}
+.form-check-label a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+.lost_password {
+    font-size: 14px;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: #6b6d6f;
+    font-weight: 300;
+    line-height: 1;
+    transition: 0.5s;
+}
+.lost_password:hover {
+    color: var(--theme_black);
+    transition: 0.5s;
+}
+.sign_in_btn {
+    width: 100%;
+    background-color: var(--theme_black);
+    color: var(--pure_white)!important;
+    border-radius: 8px;
+    letter-spacing: 0.5px;
+    height: 42px;
+}
+span.register_area {
+    display: block;
+    text-align: center;
+    font-weight: 300;
+    color: #6b6d6f;
+}
+.create_account, .alt_log_in {
+    color: var(--theme_black);
+    text-decoration: none;
+    font-weight: 400;
+}
+
+/* ========user profile page start======== */
+section.user_profl_sec {
+    margin: 15px 0px;
+}
+.profile_btn, .forms_btn {
+    background-color: var(--theme_black);
+    color: var(--pure_white);
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    box-shadow: none!important;
+}
+.api_item {
+    background: #fff;
+    margin-top: 1.5rem;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: rgb(0 0 0 / 17%) 0px 1px 10px 0px, rgb(0 0 0 / 22%) 0px 1px 8px 0px !important;
+}
+b.api_title {
+    display: flex;
+    gap: 10px;
+    text-align: center;
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+b.api_title span,
+span.api_secret span {
+    text-transform: initial;
+    max-width: calc(100% - 106px);
+    /* display: -webkit-box; */
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}   
+span.api_secret {
+    text-transform: capitalize;
+    display: block;
+    text-align: center;
+    line-break: anywhere;
+    font-size: 15px;
+}
+span.client_id {
+    display: block;
+    text-align: center;
+    text-transform: capitalize;
+    margin: 15px 0px;
+}
+.btn_grps {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.create_strategy {
+    background: #42bfcc;
+    color: #fff;
+    text-transform: uppercase;
+    flex: 1;
+}
+.view_strategy {
+    background: #425ccc;
+    color: #fff;
+    text-transform: uppercase;
+    flex: 1;
+}
+/* ========user profile page close======== */
+
+
+
+
+
+
+/* =====dashboard section start==== */
+#banner_card .card-body .col-xxl-6 {
+    flex: 0 0 auto;
+    width: 100%;
+    padding-left: 0;
+}
+.chart_views figure {
+    margin-bottom: 15px;
+}
+.get_forms label {
+    display: block;
+    font-size: 14px;
+    font-weight: 200;
+    margin-top: 10px;
+}
+.btn-close:hover {
+    transform: rotate(180deg);
+    transition: 0.5s;
+}
+.form_types label {
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+.form_types .form-control {
+    border-radius: 8px;
+    min-height: 42px;
+    position: relative;
+    font-weight: 300;
+    box-shadow: rgb(0 0 0 / 10%) 0px 1px 3px 0px, rgb(0 0 0 / 4%) 0px 1px 2px 0px !important;
+}
+.icon_right .input_icon {
+    left: unset;
+    right: 13px;
+}
+.form_types .icon_right .form-control {
+    padding-left: 1rem;
+    padding-right: 50px;
+}
+.form_types .icon_right .input_area::after {
+    left: unset;
+    right: 40px;
+}
+.needs-validation .form-control {
+    border-radius: 8px;
+    min-height: 42px;
+    position: relative;
+    font-weight: 300;
+    box-shadow: rgb(0 0 0 / 10%) 0px 1px 3px 0px, rgb(0 0 0 / 4%) 0px 1px 2px 0px !important;
+}
+/* =====dashboard section close==== */
+
+
+

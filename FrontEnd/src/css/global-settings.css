@@ -1,0 +1,166 @@
+.global_settings_area {
+    padding: 15px;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.global_title {
+    font-size: 24px;
+    text-transform: capitalize;
+}
+
+.global_area_inner {
+    background: #f1f1f185;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.conditional_input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.conditional_input .form-control {
+    max-width: 40%;
+}
+
+.conditional_input .form-check-label {
+    margin-bottom: 0;
+}
+
+.mode {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.bordered_area {
+    padding: 20px;
+    background: #fff;
+    border-radius: 4px;
+    position: relative;
+}
+
+.bordered_area::after {
+    content: attr(id);
+    position: absolute;
+    left: 19px;
+    top: -12px;
+    width: 100%;
+    text-transform: capitalize;
+}
+
+.mode_input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mode_input .form-control {
+    max-width: 200px;
+}
+
+.entry_type {
+    max-width: 300px;
+}
+
+.limit_buffer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.limit_buffer_inputs {
+    display: flex;
+    gap: 10px;
+    max-width: 318px;
+}
+
+.limit_buffer strong {
+    font-size: 14px;
+}
+
+.modify_order {
+    max-width: 220px;
+}
+
+.radio_area {
+    display: flex;
+    justify-content: space-between;
+}
+
+.radio_area label,
+.radio_area .form-check {
+    margin-bottom: 0;
+}
+
+.multipilar {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.tele_msg {
+    max-width: 200px;
+}
+
+.btn_submit_area {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-update {
+    background-color: var(--theme_black);
+    color: var(--pure_white) !important;
+    min-width: 150px;
+}
+
+.ques_btn{
+    margin-left: 10px;
+    position: relative;
+}
+
+.questio_mark {
+    position: absolute;
+    bottom: -20px;
+    right: -13px;
+}
+
+.quatation_area {
+    position: absolute;
+    background: #fff;
+    padding: 10px;
+    z-index: 99;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    min-width: 100px;
+    opacity: 0;
+    visibility: hidden;
+    top: 10px;
+    left: 130%;
+    transition: 0.5s;
+}
+
+.questio_mark:hover .quatation_area {
+    visibility: visible;
+    left: 110%;
+    transition: 0.5s;
+    opacity: 1;
+}
+.ques_btn:hover .quatation_area {
+        visibility: visible;
+        left: 110%;
+        transition: 0.5s;
+        opacity: 1;
+        bottom: 0;
+        top: inherit;
+}
+.ques_btn .quatation_area {
+    top: inherit;
+    bottom: 0;
+}
+
+.quatation_area p {
+    margin-bottom: 0;
+}
