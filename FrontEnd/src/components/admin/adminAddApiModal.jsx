@@ -14,10 +14,10 @@ export default function AdminAddApiModal(props) {
     let { userId } = useParams()
 
     const GetApi = useSelector((state) => state.GetApi)
-    const ApiKeyName = useSelector((state) => state.ApiKey)
+    const SingleApiKey = useSelector((state) => state.SingleApiKey)
 
     const { ApiList } = GetApi
-    const { ApiKeyS } = ApiKeyName
+    const { singleApiKey } = SingleApiKey
 
     // Copy for a new Api
     const [NewApiKey, setNewApiKey] = useState("")
@@ -32,19 +32,19 @@ export default function AdminAddApiModal(props) {
     const dispatch = useDispatch()
 
     useEffect(() => {
-        if (ApiKeyS) {
+        if (singleApiKey) {
             ApiList.map((ApiList) => {
-                if (ApiList.id === ApiKeyS) {
-                    setApiKey(ApiList.key)
-                    setApiSecret(ApiList.secret)
+                if (ApiList.apiId === singleApiKey) {
+                    setApiKey(ApiList.apiKey)
+                    setApiSecret(ApiList.apiSecret)
                     setApiId(ApiList.clientApiId)
-                    setNewApiKey(ApiList.key)
-                    setNewApiSecret(ApiList.secret)
+                    setNewApiKey(ApiList.apiKey)
+                    setNewApiSecret(ApiList.apiSecret)
                     setNewApiId(ApiList.clientApiId)
                 }
             })
         }
-    }, [ApiKeyS, ApiList])
+    }, [ApiList, singleApiKey])
 
     // For create a new api
     const onSubmit = (data) => {

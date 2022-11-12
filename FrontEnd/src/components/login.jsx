@@ -3,6 +3,8 @@ import { useForm } from "react-hook-form";
 import { useSelector, useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { UserLoginAction } from '../Redux/Action/UserAction'
+import ErrorAlert from './Shared/Alert';
+import MagnifineLoader from './Shared/loader';
 
 
 export default function Login() {
@@ -14,7 +16,7 @@ export default function Login() {
 
     const userLogin = useSelector((state) => state.userLogin)
 
-    const { userInfo } = userLogin
+    const { loading, userInfo, error } = userLogin
 
     useEffect(() => {
         if (userInfo) {
@@ -35,11 +37,10 @@ export default function Login() {
         <>
             <div className="login_area">
                 <div className="login_wrapper">
-
                     <span className="page_title">login page</span>
                     <div className="login_inner">
                         <b className="section_title">Sign in to our platform</b>
-                        <p>{errors.age?.message}</p>
+                        {error && <ErrorAlert variant="danger" children={"Userid Password not matched"} />}
                         <form onSubmit={handleSubmit(onSubmit)} className="needs-validation" noValidate>
                             <div className="form-group mb-4">
                                 <label htmlFor="loginemail" className="form-label">your email</label>

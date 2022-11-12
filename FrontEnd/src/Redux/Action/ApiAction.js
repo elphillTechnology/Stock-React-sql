@@ -1,5 +1,5 @@
 import axios from "axios";
-import { ADD_API_FAILS, ADD_API_REQUEST, ADD_API_SUCCESS, API_KEY_FAILS, API_KEY_REQUEST, API_KEY_SUCCESS, GET_ALL_API_FAILS, GET_ALL_API_REQUEST, GET_ALL_API_SUCCESS, GET_API_FAILS, GET_API_REQUEST, GET_API_SUCCESS, GET_USER_API_FAILS, GET_USER_API_REQUEST, GET_USER_API_SUCCESS } from "../Constants/ApiConstants";
+import { ADD_API_FAILS, ADD_API_REQUEST, ADD_API_SUCCESS, API_KEY_FAILS, API_KEY_REQUEST, API_KEY_SUCCESS, GET_ALL_API_FAILS, GET_ALL_API_REQUEST, GET_ALL_API_SUCCESS, GET_API_FAILS, GET_API_REQUEST, GET_API_SUCCESS, GET_USER_API_FAILS, GET_USER_API_REQUEST, GET_USER_API_SUCCESS, SINGLE_API_KEY_FAILS, SINGLE_API_KEY_REQUEST, SINGLE_API_KEY_SUCCESS } from "../Constants/ApiConstants";
 
 // Admin Api Section
 export const AddApiAction = (details, userId) => async (dispatch, getState) => {
@@ -53,6 +53,15 @@ export const CreateApiKeyAction = ( apiId, password ) => async (dispatch, getSta
         dispatch(GetAllApisAction())
     } catch (error) {
         dispatch({ type: API_KEY_FAILS, payload: error.response && error.response.data.message ? error.response.data.message : error.message, });
+    }
+}
+
+export const ApiKeyAction = (apiId) => async (dispatch) => {
+    try {
+        dispatch({ type: SINGLE_API_KEY_REQUEST })
+        dispatch({ type: SINGLE_API_KEY_SUCCESS, payload: apiId })
+    } catch (error) {
+        dispatch({ type: SINGLE_API_KEY_FAILS, payload: error.response && error.response.data.message ? error.response.data.message : error.message, });
     }
 }
 

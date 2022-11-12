@@ -1,4 +1,4 @@
-import { ADD_API_FAILS, ADD_API_REQUEST, ADD_API_SUCCESS, API_KEY_FAILS, API_KEY_REQUEST, API_KEY_SUCCESS, GET_ALL_API_FAILS, GET_ALL_API_REQUEST, GET_ALL_API_SUCCESS, GET_API_FAILS, GET_API_REQUEST, GET_API_SUCCESS, GET_USER_API_FAILS, GET_USER_API_REQUEST, GET_USER_API_SUCCESS } from "../Constants/ApiConstants";
+import { ADD_API_FAILS, ADD_API_REQUEST, ADD_API_SUCCESS, API_KEY_FAILS, API_KEY_REQUEST, API_KEY_SUCCESS, GET_ALL_API_FAILS, GET_ALL_API_REQUEST, GET_ALL_API_SUCCESS, GET_API_FAILS, GET_API_REQUEST, GET_API_SUCCESS, GET_USER_API_FAILS, GET_USER_API_REQUEST, GET_USER_API_SUCCESS, SINGLE_API_KEY_FAILS, SINGLE_API_KEY_REQUEST, SINGLE_API_KEY_SUCCESS } from "../Constants/ApiConstants";
 
 // Admin Api Section
 export const AddApiReducer = (state = {}, action) => {
@@ -44,6 +44,22 @@ export const CreateApiKeyReducer = (state = {}, action) => {
         case API_KEY_FAILS:
             return { loading: false, error: action.payload }
 
+        default:
+            return state;
+    }
+}
+
+export const ApiKeyReducer = (state = {}, action) => {
+    switch (action.type) {
+        case SINGLE_API_KEY_REQUEST:
+            return { loading: true }
+        
+        case SINGLE_API_KEY_SUCCESS:
+            return { loading: false, singleApiKey: action.payload }
+        
+        case SINGLE_API_KEY_FAILS: 
+            return {loading: false, error: action.error}
+    
         default:
             return state;
     }

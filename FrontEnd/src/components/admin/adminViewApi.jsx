@@ -4,7 +4,7 @@ import AdminSidenavbar from "./adminSidenavbar";
 import AdminTopnavbar from "./adminTopnavbar";
 import AdminAddApiModal from "./adminAddApiModal";
 import { useSelector, useDispatch } from 'react-redux'
-import { GetApiAction } from '../../Redux/Action/ApiAction';
+import { ApiKeyAction, GetApiAction } from '../../Redux/Action/ApiAction';
 import MagnifineLoader from '../Shared/loader';
 import ErrorAlert from '../Shared/Alert';
 
@@ -28,8 +28,11 @@ export default function AdminViewApi(props) {
         dispatch(GetApiAction(userId))
     }, [dispatch, navigate, userId, userInfo])
 
+    console.log(ApiList);
+
 
     const OpenModal = (data) => {
+        dispatch(ApiKeyAction(data))
         document.getElementById("new_api").style.display = "none";
         document.getElementById("exsisting_user").style.display = "block";
     }
@@ -116,8 +119,8 @@ export default function AdminViewApi(props) {
                                                             <td className="border-0">{ApiList.apiSecret}</td>
                                                             <td className="border-0">{ApiList.clientApiId}</td>
                                                             <td className="border-0 p-1">
-                                                                <Link to={`/admin/strategy/${ApiList.id}`} className="btn btn-primary btn-sm m-1">View</Link>
-                                                                <button type="button" className="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#formModal" data-bs-whatever="@mdo" value={ApiList.id} onClick={() => OpenModal(ApiList.id)}>Copy</button>
+                                                                <Link to={`/admin/strategy/${ApiList.apiId}`} className="btn btn-primary btn-sm m-1">View</Link>
+                                                                <button type="button" className="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#formModal" data-bs-whatever="@mdo" value={ApiList.apiId} onClick={() => OpenModal(ApiList.apiId)}>Copy</button>
                                                             </td>
                                                         </tr>
                                                     ))}

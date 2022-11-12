@@ -65,17 +65,28 @@ client.connect(err => {
 
 // sql :---
 
+// module.exports.sqlConnection = () => {
+// 	const sqlConn = sql.createConnection({
+// 		host: "localhost",
+// 		user: "jalu",
+// 		password: "jaluadmin123",
+// 		database: "trading"
+// 	})	
+// 	sqlConn.connect((error) => {
+// 		if( error ) throw new Error(error)
+// 	})
+// 	return sqlConn
+// }
+
 module.exports.sqlConnection = () => {
 	const sqlConn = sql.createConnection({
 		host: "localhost",
 		user: "elpdev",
 		password: "elphill123",
 		database: "trading"
-	})	
+	})
 	sqlConn.connect((error) => {
-		if( error ) throw new Error(error)
+		if (error) throw new Error(error)
 	})
 	return sqlConn
 }
-
-
